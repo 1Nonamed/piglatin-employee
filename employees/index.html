@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employees</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./app.js"></script>
   </head>
   <body>
     <header
@@ -13,18 +14,20 @@
       <h1 class="text-2xl font-bold">Employees</h1>
     </header>
     <a href="/piglatin/index.html">PigLatin</a>
-    <main>
-      <nav class="h-12 bg-[#F7F7F7]">
-        <ul class="flex h-full">
+    <main class="m-auto my-0">
+      <div class="bg-[#F7F7F7]">
+        <nav class="px-3 h-12 max-w-md  my-0 m-auto">
+          <ul class="flex h-full">
           <li>
             <button class="px-4 bg-[#A6CDC6] h-full">Search</button>
           </li>
           <li><button class="px-4 h-full">Add</button></li>
         </ul>
       </nav>
-      <section class="px-3 py-5">
+    </div>
+      <section class="px-3 py-5 max-w-md my-0 m-auto">
         <!-- Search -->
-        <!-- <article class="px-3 py-2 rounded-md bg-[#F2F2F2] text-sm">
+        <article class="px-3 py-2 rounded-md bg-[#F2F2F2] text-sm">
           <p class="py-2">
             Note: All records will be displayed if textbox is empty.
           </p>
@@ -44,9 +47,9 @@
               Search
             </button>
           </form>
-        </article> -->
+        </article>
         <!-- Add -->
-        <article class="px-3 py-2 rounded-md bg-[#F2F2F2] text-sm">
+        <!-- <article class="px-3 py-2 rounded-md bg-[#F2F2F2] text-sm">
           <p class="py-2">
             Please enter employee details below. All fields are required.
           </p>
@@ -88,11 +91,14 @@
               Add
             </button>
           </form>
-        </article>
+        </article> -->
       </section>
       <!-- Results -->
-      <section class="px-3 py-5">
+      <section class="px-3 py-5 max-w-md my-0 m-auto">
         <p>Search result:</p>
+        <article id="results">
+
+        </article>
       </section>
     </main>
   </body>
