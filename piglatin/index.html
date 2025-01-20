@@ -4,9 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PigLatin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>PigLatin</h1>
+    <header  class="h-16 flex justify-center items-center bg-[#187EC7] text-white uppercase">
+      <h1 class="text-2xl font-bold">PigLatin</h1>
+    </header>
     <a href="/employees/index.html">Employees</a>
+    <main class="m-auto my-0">
+      <section class="px-3 py-5 max-w-md my-0 m-auto">
+        <article class="px-3 py-2 rounded-md bg-[#F2F2F2] text-sm">
+          <form class="py-2 flex flex-col">
+            <div class="flex flex-col gap-2">
+              <label for="word" >Enter a word:</label>
+              <input type="text" id="word" name="word" class="border-2 border-[#6CC0FC] rounded-md outline-[#187EC7] mb-2 h-7 pl-2"/>
+              <button class="p-2 bg-[#6CC0FC] rounded-md text-white font-bold">
+                Translate to PigLatin
+              </button>
+            </div>
+          </form>
+          <div class="flex flex-col gap-2">
+            <p>Transalation:</p>
+            <p class="bg-[#BBBBBB] border-2 border-[#D7D7D7] rounded-md mb-2 h-7 pl-2">t</p>
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
