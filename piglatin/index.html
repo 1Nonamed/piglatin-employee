@@ -5,29 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PigLatin</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./app.js"></script>
   </head>
   <body>
-    <header  class="h-16 flex justify-center items-center bg-[#187EC7] text-white uppercase">
+    <header
+      class="h-16 flex justify-center items-center bg-[#187EC7] text-white uppercase"
+    >
       <h1 class="text-2xl font-bold">PigLatin</h1>
     </header>
-    <a href="/employees/index.html">Employees</a>
-    <main class="m-auto my-0">
-      <section class="px-3 py-5 max-w-md my-0 m-auto">
+    <main class="m-auto h-[calc(100vh-64px)] flex flex-col justify-between">
+      <section class="px-3 py-5 mx-auto w-screen max-w-md">
         <article class="px-3 py-2 rounded-md bg-[#F2F2F2] text-sm">
           <form class="py-2 flex flex-col">
             <div class="flex flex-col gap-2">
-              <label for="word" >Enter a word:</label>
-              <input type="text" id="word" name="word" class="border-2 border-[#6CC0FC] rounded-md outline-[#187EC7] mb-2 h-7 pl-2"/>
+              <label for="word">Enter a word:</label>
+              <input
+                type="text"
+                id="word"
+                name="word"
+                placeholder="banana"
+                required
+                class="border-2 border-[#6CC0FC] rounded-md outline-[#187EC7] mb-2 h-7 pl-2"
+              />
               <button class="p-2 bg-[#6CC0FC] rounded-md text-white font-bold">
                 Translate to PigLatin
               </button>
             </div>
           </form>
           <div class="flex flex-col gap-2">
-            <p>Transalation:</p>
-            <p class="bg-[#BBBBBB] border-2 border-[#D7D7D7] rounded-md mb-2 h-7 pl-2">t</p>
+            <label for="translatedWord">Transalation:</label>
+            <input
+              id="translatedWord"
+              name="translatedWord"
+              class="bg-[#d7d7d7] border-2 border-[#D7D7D7] rounded-md mb-2 h-7 pl-2 text-black"
+              placeholder="ananabay"
+              disabled
+            />
           </div>
         </article>
+      </section>
+      <section class="px-3 py-5 max-w-md mx-auto">
+        <a
+          href="/employees/index.html"
+          class="bg-[#187EC7] text-white p-2 rounded-md cursor-pointer"
+          >Employees</a
+        >
       </section>
     </main>
   </body>
