@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employees</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="./app.js"></script>
+    <script type="module" src="./app.js"></script>
   </head>
   <body>
     <header
@@ -16,15 +16,15 @@
     <a href="/piglatin/index.html">PigLatin</a>
     <main class="m-auto my-0">
       <div class="bg-[#F7F7F7]">
-        <nav class="px-3 h-12 max-w-md  my-0 m-auto">
+        <nav class="px-3 h-12 max-w-md my-0 m-auto">
           <ul class="flex h-full">
-          <li>
-            <button class="px-4 bg-[#A6CDC6] h-full">Search</button>
-          </li>
-          <li><button class="px-4 h-full">Add</button></li>
-        </ul>
-      </nav>
-    </div>
+            <li>
+              <button class="px-4 bg-[#A6CDC6] h-full">Search</button>
+            </li>
+            <li><button class="px-4 h-full">Add</button></li>
+          </ul>
+        </nav>
+      </div>
       <section class="px-3 py-5 max-w-md my-0 m-auto">
         <!-- Search -->
         <article class="px-3 py-2 rounded-md bg-[#F2F2F2] text-sm">
@@ -96,9 +96,7 @@
       <!-- Results -->
       <section class="px-3 py-5 max-w-md my-0 m-auto">
         <p>Search result:</p>
-        <article id="results">
-
-        </article>
+        <article id="results"></article>
       </section>
     </main>
   </body>
