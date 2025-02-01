@@ -1,5 +1,4 @@
 const $ = (el) => document.querySelector(el);
-
 const $$ = (el) => document.querySelectorAll(el);
 
 const customers = [
@@ -61,18 +60,16 @@ const customers = [
 
 // import customers from "./customers.json" with {type: "json"};
 
-const resultsDiv = $("#results");
-const test = $("#results");
-console.log(test);
-
 const form = $("form");
+const resultsDiv = $("#results");
 
+// Display all customers on form submit
 form.addEventListener("submit", (e) => {
-  e.preventDefault()
+  e.preventDefault();
 
   customers.forEach((customer) => {
-  const { CustomerID, FirstName, LastName } = customer;
-  resultsDiv.innerHTML += `
+    const { CustomerID, FirstName, LastName } = customer;
+    resultsDiv.innerHTML += `
     <tr class="odd:bg-white even:bg-green-50  border-b border-gray-200 text-sm">
         <td class="border px-2 py-1">${CustomerID}</td>
         <td class="border px-2 py-1">${FirstName}</td>
@@ -81,10 +78,21 @@ form.addEventListener("submit", (e) => {
         <td class="border px-2 py-1">1</td>
     </tr>
     `;
+  });
 });
 
+// Get all nav buttons
+const navButtons = $$("nav button");
+const articles = $$("article");
+
+// Toggle active class on nav buttons
+navButtons.forEach((button, i) => {
+  button.addEventListener("click", () => {
+    navButtons.forEach((btn) => btn.classList.remove("bg-[#A6CDC6]"));
+    button.classList.add("bg-[#A6CDC6]");
+
+    // Show and hide articles
+    articles.forEach((article) => article.classList.add("hidden"));
+    articles[i].classList.remove("hidden");
+  });
 });
-
-
-
-// resultsDiv.innerHTML = 'Hi'
