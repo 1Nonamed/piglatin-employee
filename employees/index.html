@@ -13,10 +13,9 @@
     >
       <h1 class="text-2xl font-bold">Employees</h1>
     </header>
-    <a href="/piglatin/index.html">PigLatin</a>
     <main class="m-auto my-0">
       <div class="bg-[#F7F7F7]">
-        <nav class="px-3 h-12 max-w-md my-0 m-auto">
+        <nav class="px-3 h-12 max-w-md mt-5 m-auto">
           <ul class="flex h-full">
             <li>
               <button class="px-4 bg-[#A6CDC6] h-full">Search</button>
@@ -40,7 +39,8 @@
                 type="text"
                 name="employee"
                 id="employee"
-                class="border-2 border-[#A6CDC6] rounded-md outline-[#16404D] mb-2 h-7 pl-2"
+                class="border-2 border-[#A6CDC6] rounded-md outline-[#16404D] mb-2 h-8 pl-2"
+                placeholder="Enter employee id, lastname or level"
               />
             </div>
             <button class="p-2 bg-[#16404D] rounded-md text-white font-bold">
@@ -55,62 +55,52 @@
           </p>
           <form action="" class="py-2 flex flex-col">
             <div class="flex flex-col">
-              <label for="firtsname" class="mb-1"
-                >First name:</label
-              >
+              <label for="firtsname" class="mb-1">First name:</label>
               <input
                 type="text"
                 name="firtsname"
                 id="firtsname"
                 class="border-2 border-[#A6CDC6] rounded-md outline-[#16404D] mb-2 h-7 pl-2"
+                placeholder="John"
+                required
               />
             </div>
             <div class="flex flex-col">
-              <label for="lastname" class="mb-1"
-                >Last name:</label
-              >
+              <label for="lastname" class="mb-1">Last name:</label>
               <input
                 type="text"
                 name="lastname"
                 id="lastname"
                 class="border-2 border-[#A6CDC6] rounded-md outline-[#16404D] mb-2 h-7 pl-2"
+                placeholder="Doe"
+                required
               />
             </div>
             <div class="flex flex-col">
-              <label for="salary" class="mb-1"
-                >Salary:</label
-              >
+              <label for="salary" class="mb-1">Salary:</label>
               <input
                 type="number"
                 name="salary"
                 id="salary"
                 class="border-2 border-[#A6CDC6] rounded-md outline-[#16404D] mb-2 h-7 pl-2"
+                placeholder="1000"
+                required
               />
             </div>
-            <button class="p-2 bg-[#16404D] rounded-md text-white font-bold">
+            <button class="mt-2 p-2 bg-[#16404D] rounded-md text-white font-bold">
               Add
             </button>
           </form>
         </article>
       </section>
       <!-- Results -->
-      <section class="px-3 py-5 max-w-md my-0 m-auto">
-        <p>Search Results:</p>
-        <div class="relative overflow-x-auto rounded-lg">
-          <table class="w-full text-left">
-            <thead class="text-sm uppercase">
-              <tr>
-                <th scope="col" class="border border-collapse px-2 py-1">ID</th>
-                <th scope="col" class="border border-collapse px-2 py-1">Firstname</th>
-                <th scope="col" class="border border-collapse px-2 py-1">Lastname</th>
-                <th scope="col" class="border border-collapse px-2 py-1">Salary</th>
-                <th scope="col" class="border border-collapse px-2 py-1">Level</th>
-              </tr>
-            </thead>
-            <tbody id="results"></tbody>
-          </table>
-        </div>
+      <section id="employees" class="px-3 py-5 max-w-md my-0 m-auto hidden">
+        <div id="results" class="relative overflow-x-auto rounded-lg"></div>
       </section>
+      <!-- PigLatin -->
+      <div class="fixed bottom-5 text-center w-full">
+        <a href="/piglatin/index.html" class="bg-[#16404D] text-white p-2 rounded-md cursor-pointer">PigLatin</a>
+      </div>
     </main>
   </body>
 </html>
